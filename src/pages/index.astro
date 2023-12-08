@@ -1,42 +1,369 @@
 ---
 import Header from '../components/Header.astro';
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import '../styles/global.css';
+import { Image } from 'astro:assets';
+import localTopImage from '../images/002.jpg';
+import localContentsImage01 from '../images/001.jpg';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		 <Header />
 
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout title="Motion Stock">
+	<Header></Header>
+	<main>
+    <section class="main">
+      <div class="space s1"></div>
+      <!--
+      <h2 class="textSlide-in"><span class="hidden-text">motion stock</span></h2>
+      -->
+
+      <div class="kv_title-wrap">
+        <h1>
+          <div class="w kv_title">
+            <div class="js-split-l c">m</div>
+            <div class="js-split-l c">o</div>
+            <div class="js-split-l c">t</div>
+            <div class="js-split-l c">i</div>
+            <div class="js-split-l c">o</div>
+            <div class="js-split-l c">n</div>
+          </div>
+          <div class="w kv_title">
+            <div class="js-split-l c">s</div>
+            <div class="js-split-l c">t</div>
+            <div class="js-split-l c">o</div>
+            <div class="js-split-l c">c</div>
+            <div class="js-split-l c">k</div>
+          </div>
+        </h1>
+
+        <div class="js-circle">
+          <div class="circle circle-firstview">
+            <span class="circle-arrow">
+              <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.724609 8.13086L21.321 8.13086" stroke="#1D1D1B" stroke-width="1.5"/>
+                <path d="M14.5063 1.27511C15.6168 3.55201 18.6154 8.10581 21.7251 8.10581C19.3188 8.19331 15.4516 11.2584 14.5063 15.7246" stroke="#1D1D1B" stroke-width="1.5"/>
+              </svg>
+            </span>
+            <span class="circle-rotate-wrap js-circle-rotate">
+              <img class="circle-text circle-rotation is-desktop is-tablet" src="https://www.kodonishimura.com/wprs/wp-content/themes/kodonishimura2021/assets/img/common/circle_scrolldown.svg" alt="">
+              <!--<img class="circle-text circle-rotation is-mobile" src="https://www.kodonishimura.com/wprs/wp-content/themes/kodonishimura2021/assets/img/common/circle_scrolldown_sp.svg" alt="">-->
+            </span>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="space s4"></div>
+
+      <div class="kv_img">
+		<Image src={localTopImage} alt="TOP画像イメージ"/>
+      </div>
+      
+      <!--
+      <div class="button fadeIn-up">
+        <span class="button-body">
+          <span class="button-text">Contact</span>
+          <span class="button-arrow">
+              <svg class="button-svg" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.724609 8.13086L21.321 8.13086" stroke="#1D1D1B" stroke-width="1.5"/>
+                <path d="M14.5063 1.27511C15.6168 3.55201 18.6154 8.10581 21.7251 8.10581C19.3188 8.19331 15.4516 11.2584 14.5063 15.7246" stroke="#1D1D1B" stroke-width="1.5"/>
+              </svg>
+          </span>
+        </span>
+      </div>
+      -->
+
+      <div class="space s3"></div>
+    </section>
+
+    <section class="section">
+      <div class="section_body">
+
+        <h2 class="sectoin-title">IMAGES</h2>
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(fade-in)</p>
+        </div>
+        <div class="space s4"></div>
+
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="list_img fadeIn"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/></div>
+            <p class="list_text fadeIn">fade-in</p>
+          </a>
+        </div>
+
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="list_img fadeIn-up"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/></div>
+            <p class="list_text fadeIn">fade-in-up</p>
+          </a>
+        </div>
+        
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="list_img fadeIn-down"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/></div>
+            <p class="list_text fadeIn">fade-in-down</p>
+          </a>
+        </div>
+        
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="list_img fadeIn-left"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/></div>
+            <p class="list_text fadeIn">fade-in-left</p>
+          </a>
+        </div>
+        
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="list_img fadeIn-right"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/></div>
+            <p class="list_text fadeIn">fade-in-right</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="space s2"></div>
+    </section>
+
+
+    <section class="section">
+      <div class="section_body">
+        
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(slide-in)</p>
+        </div>
+        <div class="space s4"></div>
+
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="list_img w">
+              <span class="mask slideIn-up"></span>
+              <Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/>
+            </div>
+            <p class="list_text fadeIn">slide-in-up</p>
+          </a>
+        </div>
+
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="list_img w">
+              <span class="mask slideIn-down"></span>
+              <Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/>
+            </div>
+            <p class="list_text fadeIn">slide-in-down</p>
+          </a>
+        </div>
+
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="list_img w">
+              <span class="mask slideIn-left"></span>
+              <Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/>
+            </div>
+            <p class="list_text fadeIn">slide-in-left</p>
+          </a>
+        </div>
+
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="list_img w">
+              <span class="mask slideIn-right"></span>
+              <Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/>
+            </div>
+            <p class="list_text fadeIn">slide-in-right</p>
+          </a>
+        </div>
+        
+      </div>
+      <div class="space s2"></div>
+    </section>
+
+
+    <section class="section">
+      <div class="section_body">
+        
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(zoom-in)</p>
+        </div>
+        <div class="space s4"></div>
+
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="w"><div class="list_img zoomIn-up"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/></div></div>
+            <p class="list_text fadeIn">zoom-in-up</p>
+          </a>
+        </div>
+
+        <div class="section_list">
+          <a href="#" class="section_list_co">
+            <div class="w"><div class="list_img zoomIn-out"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ"/></div></div>
+            <p class="list_text fadeIn">zoom-in-out</p>
+          </a>
+        </div>
+        
+      </div>
+      <div class="space s2"></div>
+    </section>
+
+
+    <section class="section">
+      <div class="section_body">
+
+        <h2 class="sectoin-title">TEXT</h2>
+        
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(fade-in)</p>
+        </div>
+        <div class="space s3"></div>
+        <h2 class="fadeIn">fade-in</h2>
+
+        <div class="space s3"></div>
+          <div class="section_title">
+            <div class="border borderSlide-in"></div>
+            <p class="fadeIn-up">(fade-in-up)</p>
+          </div>
+        <div class="space s3"></div>
+        <h2 class="fadeIn-up">fade-in-up</h2>
+
+        <div class="space s3"></div>
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(fade-in-down)</p>
+        </div>
+        <div class="space s3"></div>
+        <h2 class="fadeIn-down">fade-in-down</h2>
+
+        <div class="space s3"></div>
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(fade-in-left)</p>
+        </div>
+        <div class="space s3"></div>
+        <h2 class="fadeIn-left">fade-in-left</h2>
+
+        <div class="space s3"></div>
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(fade-in-right)</p>
+        </div>
+        <div class="space s3"></div>
+        <h2 class="fadeIn-right">fade-in-right</h2>
+
+        <div class="space s3"></div>
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(slide-in-up)</p>
+        </div>
+        <div class="space s3"></div>
+        <div class="w r">
+          <span class="mask slideIn-up"></span>
+          <h2>slide-in-up</h2>
+        </div>
+
+        <div class="space s3"></div>
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(slide-in-down)</p>
+        </div>
+        <div class="space s3"></div>
+        <div class="w r">
+          <span class="mask slideIn-down"></span>
+          <h2>slide-in-down</h2>
+        </div>
+
+        <div class="space s3"></div>
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(slide-in-left)</p>
+        </div>
+        <div class="space s3"></div>
+        <div class="w r c">
+          <span class="mask slideIn-left"></span>
+          <h2>slide-in-left</h2>
+        </div>
+
+        <div class="space s3"></div>
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(slide-in-right)</p>
+        </div>
+        <div class="space s3"></div>
+        <div class="w r c">
+          <span class="mask slideIn-right"></span>
+          <h2>slide-in-right</h2>
+        </div>
+
+        <div class="space s3"></div>
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(sprite-in-up)</p>
+        </div>
+        <div class="space s3"></div>
+        <div class="w">
+          <h2 class="spriteIn-up">sprite-in-up</h2>
+        </div>
+
+        <div class="space s3"></div>
+        <div class="border borderSlide-in"></div>
+        <!--
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(slide-in)</p>
+        </div>
+        <div class="space s3"></div>
+        
+        
+        <div class="">
+          <h1 class="js-trigger js-text-slide-left">MOTION STOCK</h1>
+          <h1 class="js-trigger js-text-slide-right">MOTION STOCK</h1>
+          <h1 class="js-trigger js-text-slide-left">MOTION STOCK</h1>
+          <h1 class="js-trigger js-text-slide-right">MOTION STOCK</h1>
+        </div>
+        -->
+        
+      </div>
+      <div class="space s2"></div>
+    </section>
+
+    
+
+
+    <section class="section">
+      <div class="section_body">
+
+        <h2 class="sectoin-title">CLICK</h2>
+        
+        <div class="section_title">
+          <div class="border borderSlide-in"></div>
+          <p class="fadeIn-up">(coming soon...)</p>
+        </div>
+        <div class="space s4"></div>
+
+        <!--
+
+        <div id="toggle-darkmode" class="button">
+          <span class="button-body">
+            <span class="button-text">Dark or White?</span>
+            <span class="button-arrow">
+                <svg class="button-svg" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.724609 8.13086L21.321 8.13086" stroke="#1D1D1B" stroke-width="1.5"/>
+                  <path d="M14.5063 1.27511C15.6168 3.55201 18.6154 8.10581 21.7251 8.10581C19.3188 8.19331 15.4516 11.2584 14.5063 15.7246" stroke="#1D1D1B" stroke-width="1.5"/>
+                </svg>
+            </span>
+          </span>
+        </div>
+
+        -->
+        
+      </div>
+      <div class="space s2"></div>
+    </section>
+   
+  </main>
+  
 
 </Layout>
 

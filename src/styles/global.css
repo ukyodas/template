@@ -153,15 +153,6 @@ img {
 }
 
 
-@font-face {
-  font-family: 'TTNormsPro-Rg';
-  src: url('/fonts/TTNormsPro-Rg/font.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-
 :root {
   --col-black: #1e1f1f;
   --col-black2: #1c1d1d;
@@ -711,5 +702,4 @@ footer small {
 
 */
 
-/*# sourceMappingURL=style.css.map */
 

@@ -1,0 +1,62 @@
+---
+//パーツ読み込み
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+//CSS設定
+import '../styles/global.css';
+
+//画像設定
+import { Image } from 'astro:assets';
+import contact_kv from '../images/contact_kv.jpg';
+---
+
+
+<Layout title="template">
+	<Header></Header>
+	<main>
+    <section class="kv">
+        <div class="inner">
+          <div class="wrap-lead">
+            <h1>CONTACT</h1>
+            <p class="description">このページはお問い合わせです。コンタクトフォームなどが配置されます。</p>
+          </div>
+          <Image src={contact_kv} alt="TOP画像イメージ" width={1000} height={1000}/>
+        </div>
+      </section>
+      <section class="component_list">
+        <div class="inner">
+          <ul class="main-border">
+            <p>（List）</p>
+            <ul class="list2">
+              <li class="sub-border">
+              <p>特徴01</p>
+              <div class="wrap-lead">
+                <h2>1.美しくシンプルなデザイン</h2>
+                <p>シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。</p>
+              </div>
+            </li>
+            <li class="sub-border">
+              <p>特徴02</p>
+              <div class="wrap-lead">
+                <h2>1.美しくシンプルなデザイン</h2>
+                <p>シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。</p>
+              </div>
+            </li>
+            <li class="sub-border">
+              <p>特徴03</p>
+              <div class="wrap-lead">
+                <h2>1.美しくシンプルなデザイン</h2>
+                <p>シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。</p>
+              </div>
+            </li>
+            </ul>
+          </ul>
+        </div>
+      </section>
+  </main>
+  <Footer></Footer>
+</Layout>
+
+

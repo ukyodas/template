@@ -1,0 +1,101 @@
+---
+//パーツ読み込み
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+//CSS設定
+import '../styles/global.css';
+
+//画像設定
+import { Image } from 'astro:assets';
+import list01 from '../images/list01.jpg';
+import list02 from '../images/list02.jpg';
+import list03 from '../images/list03.jpg';
+
+---
+
+
+<Layout title="template">
+	<Header></Header>
+	<main>
+    <section class="kv">
+        <div class="inner">
+          <div class="wrap-lead">
+            <h1>WORKS</h1>
+            <p class="description">このページはワークスページです。企業の実績などが記述されます。</p>
+          </div>
+        </div>
+      </section>
+            <section class="component_list">
+        <div class="inner">
+          <ul class="main-border">
+            <p>（List）</p>
+            <li class="sub-border">
+              <ul class="list">
+              <li>
+                <Image src={list01} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+              <li>
+                <Image src={list02} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+              <li>
+                <Image src={list03} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+              <li>
+                <Image src={list01} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+              <li>
+                <Image src={list02} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+              <li>
+                <Image src={list03} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+              <li>
+                <Image src={list01} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+              <li>
+                <Image src={list02} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+            </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+  </main>
+  <Footer></Footer>
+</Layout>
+
+

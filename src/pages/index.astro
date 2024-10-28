@@ -1,414 +1,181 @@
 ---
+//パーツ読み込み
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+//CSS設定
 import '../styles/global.css';
 
 //画像設定
 import { Image } from 'astro:assets';
-import localTopImage from '../images/002.jpg';
-import localContentsImage01 from '../images/001.jpg';
+import top_kv from '../images/top_kv.jpg';
+import list01 from '../images/list01.jpg';
+import list02 from '../images/list02.jpg';
+import list03 from '../images/list03.jpg';
+import works_kv from '../images/works_kv.jpg';
+import news_kv from '../images/news_kv.jpg';
+import top_layout01 from '../images/top_layout01.jpg';
+import top_layout02 from '../images/top_layout02.jpg';
+
 ---
 
 
-<Layout title="Motion Stock">
+<Layout title="template">
 	<Header></Header>
 	<main>
-    <section class="main">
-      <div class="space s1"></div>
-      <!--
-      <h2 class="textSlide-in"><span class="hidden-text">motion stock</span></h2>
-      -->
-
-      <div class="kv_title-wrap">
-        <h1>
-          <div class="w kv_title">
-            <div class="js-split-l c">m</div>
-            <div class="js-split-l c">o</div>
-            <div class="js-split-l c">t</div>
-            <div class="js-split-l c">i</div>
-            <div class="js-split-l c">o</div>
-            <div class="js-split-l c">n</div>
+    <section class="kv">
+        <div class="inner">
+          <div class="wrap-lead">
+            <h1>WEB TEMPLATE</h1>
+            <p class="description">このWebサイトはあらゆるウェブサイトに対応できる、堅牢かつ柔軟なテンプレートです。<br>JavaScriptフレームワーク「Astro」を使用し、Jamstackによる最新の開発手法を採用しています。</p>
           </div>
-          <div class="w kv_title">
-            <div class="js-split-l c">s</div>
-            <div class="js-split-l c">t</div>
-            <div class="js-split-l c">o</div>
-            <div class="js-split-l c">c</div>
-            <div class="js-split-l c">k</div>
+          <Image src={top_kv} alt="TOP画像イメージ" width={1000} height={1000}/>
+        </div>
+      </section>
+      <section class="layout_news">
+        <div class="inner">
+          <ul class="main-border">
+            <p>（List）</p>
+            <ul class="list2">
+            <a href="#">
+              <li class="sub-border">
+                <p>2024.11.06</p>
+                <div class="wrap-lead">
+                  <h2>お知らせが入りますタイトルです。</h2>
+                  <p>シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。</p>
+                </div>
+              </li>
+            </a>
+            <a href="#">
+              <li class="sub-border">
+                <p>2024.11.06</p>
+                <div class="wrap-lead">
+                  <h2>お知らせが入りますタイトルです。</h2>
+                  <p>シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。</p>
+                </div>
+              </li>
+            </a>
+            <a href="#">
+              <li class="sub-border">
+                <p>2024.11.06</p>
+                <div class="wrap-lead">
+                  <h2>お知らせが入りますタイトルです。</h2>
+                  <p>シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。</p>
+                </div>
+              </li>
+            </a>
+            </ul>
+          </ul>
+        </div>
+      </section>
+      <section class="layout_full-img">
+        <div class="inner">
+          <Image src={works_kv} alt="TOP画像イメージ" width={1000} height={1000}/>
+        </div>
+      </section>
+      <section class="component_title">
+        <div class="inner">
+          <ul class="main-border">
+            <p>（Title）</p>
+            <li class="sub-border"><h1>タイトルh1</h1></li>
+            <li class="sub-border"><h2>タイトルh2</h2></li>
+            <li class="sub-border"><h3>タイトルh3</h3></li>
+            <li class="sub-border"><h4>タイトルh4</h4></li>
+            <li class="sub-border"><h5>タイトルh5</h5></li>
+          </ul>
+        </div>
+      </section>
+      <section class="layout_2col">
+        <div class="inner">
+          <Image src={top_layout01} alt="TOP画像イメージ" width={1000} height={1000}/>
+          <div class="wrap-lead">
+            <h2>Webデザイン</h2>
+            <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+            <a href="/about" class="button -lg">ABOUT</a>
           </div>
-        </h1>
+        </div>
+      </section>
 
-        <div class="js-circle">
-          <div class="circle circle-firstview">
-            <span class="circle-arrow">
-              <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.724609 8.13086L21.321 8.13086" stroke="#1D1D1B" stroke-width="1.5"/>
-                <path d="M14.5063 1.27511C15.6168 3.55201 18.6154 8.10581 21.7251 8.10581C19.3188 8.19331 15.4516 11.2584 14.5063 15.7246" stroke="#1D1D1B" stroke-width="1.5"/>
-              </svg>
-            </span>
-            <span class="circle-rotate-wrap js-circle-rotate">
-              <img class="circle-text circle-rotation is-desktop is-tablet" src="https://www.kodonishimura.com/wprs/wp-content/themes/kodonishimura2021/assets/img/common/circle_scrolldown.svg" alt="">
-              <!--<img class="circle-text circle-rotation is-mobile" src="https://www.kodonishimura.com/wprs/wp-content/themes/kodonishimura2021/assets/img/common/circle_scrolldown_sp.svg" alt="">-->
-            </span>
+      <section class="component_list">
+        <div class="inner">
+          <ul class="main-border">
+            <p>（List）</p>
+            <li class="sub-border">
+              <ul class="list">
+              <li>
+                <Image src={list01} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+              <li>
+                <Image src={list02} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+              <li>
+                <Image src={list03} alt="TOP画像イメージ" width={1000} height={1000}/>
+                <div class="wrap-lead">
+                  <h3>Webデザイン</h3>
+                  <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+                </div>
+              </li>
+            </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="component_list">
+        <div class="inner">
+          <ul class="main-border">
+            <p>（List）</p>
+            <ul class="list2">
+              <li class="sub-border">
+              <p>特徴01</p>
+              <div class="wrap-lead">
+                <h2>1.美しくシンプルなデザイン</h2>
+                <p>シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。</p>
+              </div>
+            </li>
+            <li class="sub-border">
+              <p>特徴02</p>
+              <div class="wrap-lead">
+                <h2>1.美しくシンプルなデザイン</h2>
+                <p>シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。</p>
+              </div>
+            </li>
+            <li class="sub-border">
+              <p>特徴03</p>
+              <div class="wrap-lead">
+                <h2>1.美しくシンプルなデザイン</h2>
+                <p>シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。シンプルなデザインです。</p>
+              </div>
+            </li>
+            </ul>
+          </ul>
+        </div>
+      </section>
+      <section class="layout_full-img">
+        <div class="inner">
+          <Image src={news_kv} alt="TOP画像イメージ" width={1000} height={1000}/>
+        </div>
+      </section>
+      <section class="layout_2col">
+        <div class="inner">
+        <div class="wrap-lead">
+            <h2>Webデザイン</h2>
+            <p>ウェブサイトのデザインはユーザー体験を向上させるために非常に重要です。視覚的に魅力的でナビゲーションが簡単なサイトは、訪問者が長く滞在しやすくなります。コンテンツの配置や色の選択は、ユーザーの満足度に大きく影響します。</p>
+            <a href="/works" class="button -lg">WORKS</a>
           </div>
+          <Image src={top_layout02} alt="TOP画像イメージ" width={1000} height={1000}/>
         </div>
-      </div>
-      
-      <div class="space s4"></div>
-
-      <div class="kv_img">
-		<Image src={localTopImage} alt="TOP画像イメージ" width={1000} height={1000}/>
-      </div>
-      
-      <!--
-      <div class="button fadeIn-up">
-        <span class="button-body">
-          <span class="button-text">Contact</span>
-          <span class="button-arrow">
-              <svg class="button-svg" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.724609 8.13086L21.321 8.13086" stroke="#1D1D1B" stroke-width="1.5"/>
-                <path d="M14.5063 1.27511C15.6168 3.55201 18.6154 8.10581 21.7251 8.10581C19.3188 8.19331 15.4516 11.2584 14.5063 15.7246" stroke="#1D1D1B" stroke-width="1.5"/>
-              </svg>
-          </span>
-        </span>
-      </div>
-      -->
-
-    <div class="space s3"></div>
-
-    </section>
-
-	<!-- 
-		
-	<section class="section">
-		<ul class="news">
-			<li><a href="#">お知らせ</a></li>
-			<li><a href="#">お知らせ</a></li>
-			<li><a href="#">お知らせ</a></li>
-		</ul>
-	</section>
-
-	-->
-
-    <section class="section">
-      <div class="section_body">
-
-		<h2 class="sectoin-title">NEWS</h2>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(latest)</p>
-        </div>
-        <div class="space s4"></div>
-
-		<!-- 
-
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img fadeIn"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div>
-            <div class="fadeIn"><p class="list_text">NEWS-01</p><p>お知らせ</p><p>2023.12.22</p></div>
-          </a>
-        </div>
-
-		<div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img fadeIn"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div>
-            <div class="fadeIn"><p class="list_text fadeIn">NEWS-02</p><p>お知らせ</p><p>2023.12.22</p></div>
-          </a>
-        </div>
-
-		<div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img fadeIn"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div>
-            <div class="fadeIn"><p class="list_text fadeIn">NEWS-03</p><p>お知らせ</p><p>2023.12.22</p></div>
-          </a>
-        </div>
-
-		-->
-
-        <h2 class="sectoin-title">IMAGES</h2>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(fade-in)</p>
-        </div>
-        <div class="space s4"></div>
-
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img fadeIn"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div>
-            <p class="list_text fadeIn">fade-in</p>
-          </a>
-        </div>
-
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img fadeIn-up"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div>
-            <p class="list_text fadeIn">fade-in-up</p>
-          </a>
-        </div>
-        
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img fadeIn-down"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div>
-            <p class="list_text fadeIn">fade-in-down</p>
-          </a>
-        </div>
-        
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img fadeIn-left"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div>
-            <p class="list_text fadeIn">fade-in-left</p>
-          </a>
-        </div>
-        
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img fadeIn-right"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div>
-            <p class="list_text fadeIn">fade-in-right</p>
-          </a>
-        </div>
-      </div>
-
-      <div class="space s2"></div>
-    </section>
-
-
-    <section class="section">
-      <div class="section_body">
-        
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(slide-in)</p>
-        </div>
-        <div class="space s4"></div>
-
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img w">
-              <span class="mask slideIn-up"></span>
-              <Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/>
-            </div>
-            <p class="list_text fadeIn">slide-in-up</p>
-          </a>
-        </div>
-
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img w">
-              <span class="mask slideIn-down"></span>
-              <Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/>
-            </div>
-            <p class="list_text fadeIn">slide-in-down</p>
-          </a>
-        </div>
-
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img w">
-              <span class="mask slideIn-left"></span>
-              <Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/>
-            </div>
-            <p class="list_text fadeIn">slide-in-left</p>
-          </a>
-        </div>
-
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="list_img w">
-              <span class="mask slideIn-right"></span>
-              <Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/>
-            </div>
-            <p class="list_text fadeIn">slide-in-right</p>
-          </a>
-        </div>
-        
-      </div>
-      <div class="space s2"></div>
-    </section>
-
-
-    <section class="section">
-      <div class="section_body">
-        
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(zoom-in)</p>
-        </div>
-        <div class="space s4"></div>
-
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="w"><div class="list_img zoomIn-up"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div></div>
-            <p class="list_text fadeIn">zoom-in-up</p>
-          </a>
-        </div>
-
-        <div class="section_list">
-          <a href="#" class="section_list_co">
-            <div class="w"><div class="list_img zoomIn-out"><Image class="thumbnail" src={localContentsImage01} alt="画像イメージ" width={1000} height={300}/></div></div>
-            <p class="list_text fadeIn">zoom-in-out</p>
-          </a>
-        </div>
-        
-      </div>
-      <div class="space s2"></div>
-    </section>
-
-
-    <section class="section">
-      <div class="section_body">
-
-        <h2 class="sectoin-title">TEXT</h2>
-        
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(fade-in)</p>
-        </div>
-        <div class="space s3"></div>
-        <h2 class="fadeIn">fade-in</h2>
-
-        <div class="space s3"></div>
-          <div class="section_title">
-            <div class="border borderSlide-in"></div>
-            <p class="fadeIn-up">(fade-in-up)</p>
-          </div>
-        <div class="space s3"></div>
-        <h2 class="fadeIn-up">fade-in-up</h2>
-
-        <div class="space s3"></div>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(fade-in-down)</p>
-        </div>
-        <div class="space s3"></div>
-        <h2 class="fadeIn-down">fade-in-down</h2>
-
-        <div class="space s3"></div>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(fade-in-left)</p>
-        </div>
-        <div class="space s3"></div>
-        <h2 class="fadeIn-left">fade-in-left</h2>
-
-        <div class="space s3"></div>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(fade-in-right)</p>
-        </div>
-        <div class="space s3"></div>
-        <h2 class="fadeIn-right">fade-in-right</h2>
-
-        <div class="space s3"></div>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(slide-in-up)</p>
-        </div>
-        <div class="space s3"></div>
-        <div class="w r">
-          <span class="mask slideIn-up"></span>
-          <h2>slide-in-up</h2>
-        </div>
-
-        <div class="space s3"></div>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(slide-in-down)</p>
-        </div>
-        <div class="space s3"></div>
-        <div class="w r">
-          <span class="mask slideIn-down"></span>
-          <h2>slide-in-down</h2>
-        </div>
-
-        <div class="space s3"></div>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(slide-in-left)</p>
-        </div>
-        <div class="space s3"></div>
-        <div class="w r c">
-          <span class="mask slideIn-left"></span>
-          <h2>slide-in-left</h2>
-        </div>
-
-        <div class="space s3"></div>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(slide-in-right)</p>
-        </div>
-        <div class="space s3"></div>
-        <div class="w r c">
-          <span class="mask slideIn-right"></span>
-          <h2>slide-in-right</h2>
-        </div>
-
-        <div class="space s3"></div>
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(sprite-in-up)</p>
-        </div>
-        <div class="space s3"></div>
-        <div class="w">
-          <h2 class="spriteIn-up">sprite-in-up</h2>
-        </div>
-
-        <div class="space s3"></div>
-        <div class="border borderSlide-in"></div>
-
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(slide-in)</p>
-        </div>
-        <div class="space s3"></div>
-        
-        
-        <div class="">
-          <h1 class="js-trigger js-text-slide-left">MOTION STOCK</h1>
-          <h1 class="js-trigger js-text-slide-right">MOTION STOCK</h1>
-          <h1 class="js-trigger js-text-slide-left">MOTION STOCK</h1>
-          <h1 class="js-trigger js-text-slide-right">MOTION STOCK</h1>
-        </div>
-
-        
-      </div>
-      <div class="space s2"></div>
-    </section>
-
-    
-
-
-    <section class="section">
-      <div class="section_body">
-
-        <h2 class="sectoin-title">CLICK</h2>
-        
-        <div class="section_title">
-          <div class="border borderSlide-in"></div>
-          <p class="fadeIn-up">(coming soon...)</p>
-        </div>
-        <div class="space s4"></div>
-
-
-
-        <div id="toggle-darkmode" class="button">
-          <span class="button-body">
-            <span class="button-text">Dark or White?</span>
-            <span class="button-arrow">
-                <svg class="button-svg" width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M0.724609 8.13086L21.321 8.13086" stroke="#1D1D1B" stroke-width="1.5"/>
-                  <path d="M14.5063 1.27511C15.6168 3.55201 18.6154 8.10581 21.7251 8.10581C19.3188 8.19331 15.4516 11.2584 14.5063 15.7246" stroke="#1D1D1B" stroke-width="1.5"/>
-                </svg>
-            </span>
-          </span>
-        </div>
-
-        
-      </div>
-      <div class="space s2"></div>
-    </section>
+      </section>
   </main>
-  
-
+  <Footer></Footer>
 </Layout>
 
 
